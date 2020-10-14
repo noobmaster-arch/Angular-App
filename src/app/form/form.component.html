@@ -1,0 +1,41 @@
+<div *ngIf="bform">
+<h1>haii {{bform.name}}</h1>
+<form 
+    [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
+    <label> Name: </label>
+    <input type="text" formControlName="name" required >
+    <div
+    *ngIf="myform.controls.name.errors?.required && myform.controls.name.touched"
+    class="error">
+    *Required
+    </div><br>
+    
+    <label> Email: </label>
+    <input type="text" formControlName="email" required >
+    <div
+    *ngIf="myform.controls.email.errors?.required && myform.controls.email.touched"
+    class="error">
+    *Required
+    </div><br>
+    
+    <label> Feedback: </label>        
+    <input type="radio" formControlName="feedback" required value="Not Good" ng-checked="bform.feedback===Not Good">
+    <label>Not Good</label>
+    <input type="radio" formControlName="feedback" required value='Okay' ng-checked="bform.feedback===Okay">
+    <label>Okay</label>
+    <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Good">
+    <label>Good</label>
+    <div
+    *ngIf="myform.controls.feedback.errors?.required && myform.controls.feedback.touched"
+    class="error">
+    *Required
+    </div><br>
+    
+    <label> Comment: </label>
+    <textarea formControlName="comment"></textarea><br>
+    <button [disabled]="!myform.valid">Submit</button>
+</form>
+<ng-template *ngIf="!bform">
+    Loading User...
+</ng-template>
+</div>
