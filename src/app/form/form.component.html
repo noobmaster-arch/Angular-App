@@ -1,5 +1,4 @@
 <div *ngIf="bform">
-<h1>haii {{bform.name}}</h1>
 <form 
     [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
     <label> Name: </label>
@@ -38,4 +37,7 @@
 <ng-template *ngIf="!bform">
     Loading User...
 </ng-template>
+<div>
+    <h3>{{message}}</h3>
+</div>
 </div>

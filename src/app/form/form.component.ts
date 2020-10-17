@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-
+  message: string="";
   bform: Form;
   myform= this.fb.group({
     name:['',[Validators.required]],
@@ -36,7 +36,16 @@ export class FormComponent implements OnInit {
   }
 
   sendinfo(formData: Form){
-    this.formService.sendinfo(formData).subscribe(res=>console.log("success"), err=>console.log("error")); 
+    this.formService.sendinfo(formData).subscribe(res=>{console.log("success");
+                                                  this.message="successfully updated";
+                                                  this.myform.reset();
+                                                  this.hidemsg()}
+                                                  , err=>{console.log("error");
+                                                  this.message="Error"} )
     //update message component later
   }
+  hidemsg(){
+  setTimeout(() => {
+  this.message="";
+}, 3000);}
 }
