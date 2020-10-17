@@ -13,8 +13,13 @@ export class FormComponent implements OnInit {
   message: string="";
   bform: Form;
   myform= this.fb.group({
+<<<<<<< HEAD
     name:['',[Validators.required, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
     email:['',[Validators.required]],
+=======
+    name:['',[Validators.required]],
+    email:['',[Validators.required, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
+>>>>>>> e26d2f1030a379f6ad44703b8d8e48622fa34943
     feedback: ['',[Validators.required]],
     comment: ['']
 
