@@ -42,7 +42,6 @@ export class FormComponent implements OnInit {
                                                   this.hidemsg()}
                                                   , err=>{console.log("error");
                                                   this.message="Error"} )
-    //update message component later
   }
   hidemsg(){
   setTimeout(() => {

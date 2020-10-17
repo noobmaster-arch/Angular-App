@@ -1,43 +1,58 @@
 <div *ngIf="bform">
-<form 
-    [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
-    <label> Name: </label>
-    <input type="text" formControlName="name" required >
-    <div
-    *ngIf="myform.controls.name.errors?.required && myform.controls.name.touched"
-    class="error">
-    *Required
-    </div><br>
-    
-    <label> Email: </label>
-    <input type="text" formControlName="email" required >
-    <div
-    *ngIf="myform.controls.email.errors?.required && myform.controls.email.touched"
-    class="error">
-    *Required
-    </div><br>
-    
-    <label> Feedback: </label>        
-    <input type="radio" formControlName="feedback" required value="Not Good" ng-checked="bform.feedback===Not Good">
-    <label>Not Good</label>
-    <input type="radio" formControlName="feedback" required value='Okay' ng-checked="bform.feedback===Okay">
-    <label>Okay</label>
-    <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Good">
-    <label>Good</label>
-    <div
-    *ngIf="myform.controls.feedback.errors?.required && myform.controls.feedback.touched"
-    class="error">
-    *Required
-    </div><br>
-    
-    <label> Comment: </label>
-    <textarea formControlName="comment"></textarea><br>
-    <button [disabled]="!myform.valid">Submit</button>
-</form>
-<ng-template *ngIf="!bform">
-    Loading User...
-</ng-template>
-<div>
-    <h3>{{message}}</h3>
-</div>
+    <div class='form'>
+        <form 
+            [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
+            <div class='name'>
+                <label class='requiredfield'> Name </label><br>
+                <input type="text" id='name' formControlName="name" required >
+                <div
+                *ngIf="myform.controls.name.errors?.required && myform.controls.name.touched"
+                class="error">
+                *Required
+                </div>
+            </div><br>
+            <div class='email'>
+                <label class='requiredfield'> Email </label><br>
+                <input type="text" class="textinput" formControlName="email" required id='email'>
+                <div
+                *ngIf="myform.controls.email.errors?.required && myform.controls.email.touched"
+                class="error">
+                *Required
+                </div>
+            </div><br>
+            <div class='feedback'>
+                <label class='requiredfield'> Feedback </label> <br>  
+                <div id='feedback'>
+                    <label class='radio'><span>Not Good</span>
+                        <input type="radio" formControlName="feedback" required value="Not Good" ng-checked="bform.feedback===Not Good">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    
+                    <label class='radio'><span>Okay</span>
+                        <input type="radio" formControlName="feedback" required value='Okay' ng-checked="bform.feedback===Okay">
+                        <span class="checkmark"></span>
+                    </label><br>
+                
+                    <label class='radio'><span>Good</span>
+                        <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Good">
+                        <span class="checkmark"></span>
+                    </label>
+                <!-- <div
+                *ngIf="myform.controls.feedback.errors?.required && myform.controls.feedback.touched"
+                class="error">
+                *Required
+                </div> -->
+                </div>     
+            </div><br>
+
+            <div class='comment'><br>
+                <label id='cmnt'> Comments </label><br>
+                <textarea id='comment' formControlName="comment"></textarea>
+            </div><br>
+            <button [disabled]="!myform.valid" id='button' [class.errorsubmit]="!my.valid">Submit</button>
+        </form>
+    </div>
+    <ng-template *ngIf="!bform" id='loading'>
+        Loading User...
+    </ng-template>
 </div>
