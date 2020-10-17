@@ -38,14 +38,25 @@ export class FormComponent implements OnInit {
   sendinfo(formData: Form){
     this.formService.sendinfo(formData).subscribe(res=>{console.log("success");
                                                   this.message="successfully updated";
-                                                  this.myform.reset();
-                                                  this.hidemsg()}
+                                                  this.myform.reset()}
+                                                  // this.hidemsg()}
                                                   , err=>{console.log("error");
                                                   this.message="Error"} )
     //update message component later
   }
-  hidemsg(){
-  setTimeout(() => {
-  this.message="";
-}, 3000);}
+//   hidemsg(){
+//   setTimeout(() => {
+//   this.message="";
+// }, 3000);}
+  share(){
+    if (this.message!=''){    
+      if (this.message=="successfully updated") {
+        window.alert("Successfully Updated");
+        this.message='';
+      } else {
+        window.alert("Error");
+        this.message='';
+      }      
+    } 
+  }
 }
