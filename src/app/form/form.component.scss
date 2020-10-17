@@ -77,7 +77,7 @@ input[type='radio'] {
   border-radius: 10%;
 }
 
-/* When the radio button is checked, add a blue background */
+/* When the radio button is checked, add a colored background */
 input[type="radio"]:checked ~ .checkmark {
   background-color: green;
 }
@@ -101,7 +101,7 @@ textarea {
     margin-bottom: 10px;
   }
 
-  #button {
+  button {
     display: inline-block;
     padding: 0.20em ;
     border: 0.1em solid slateblue;
@@ -120,7 +120,7 @@ textarea {
     font-size: 130%;
   }
 
-  .errorsubmit{
+  button:disabled{
     display: inline-block;
     padding: 0.20em ;
     border: 0.1em solid rgb(204, 182, 241);
@@ -139,3 +139,31 @@ textarea {
     font-size: 130%;
   }
 
+.btn{
+    margin-left:60px;
+    margin-top:10px;
+    position:relative;
+    display: inline-block;
+    padding: 0.20em ;
+    border: 0.1em solid slateblue;
+    background-color: slateblue;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roborto',sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    width: 7%;
+    height: 5%;
+    font-size: 130%;
+}
+
+a{
+    color: white;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
