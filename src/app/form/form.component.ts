@@ -14,7 +14,7 @@ export class FormComponent implements OnInit {
   bform: Form;
   myform= this.fb.group({
     name:['',[Validators.required]],
-    email:['',[Validators.required, Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
+    email:['',[Validators.required]],
     feedback: ['',[Validators.required]],
     comment: ['']
 
@@ -39,14 +39,9 @@ export class FormComponent implements OnInit {
     this.formService.sendinfo(formData).subscribe(res=>{console.log("success");
                                                   this.message="successfully updated";
                                                   this.myform.reset()}
-                                                  // this.hidemsg()}
                                                   , err=>{console.log("error");
                                                   this.message="Error"} )
   }
-//   hidemsg(){
-//   setTimeout(() => {
-//   this.message="";
-// }, 3000);}
   share(){
     if (this.message!=''){    
       if (this.message=="successfully updated") {

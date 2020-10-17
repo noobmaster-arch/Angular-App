@@ -49,10 +49,10 @@
                 <label id='cmnt'> Comments </label><br>
                 <textarea id='comment' formControlName="comment"></textarea>
             </div><br>
-            <button [disabled]="!myform.valid" id='button' [class.errorsubmit]="!my.valid">Submit</button>
+            <button [disabled]="!myform.valid" id='button' [class.errorsubmit]="!myform.valid">Submit</button>
         </form>
     </div>
-    <ng-template *ngIf="!bform" id='loading'>
+    <ng-template *ngIf="!myform" id='loading'>
         Loading User...
     </ng-template>
 <div>
