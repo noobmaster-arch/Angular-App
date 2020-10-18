@@ -1,3 +1,4 @@
 
 
 https://stackoverflow.com/questions/279421/can-you-style-an-html-radio-button-to-look-like-a-checkbox
+https://stackoverflow.com/questions/57800836/angular-7-email-validation-using-regex-on-reactive-form
