@@ -36,7 +36,7 @@ export class FormComponent implements OnInit {
   }
 
   sendinfo(formData: Form){
-    this.formService.sendinfo(formData).subscribe(res=>{console.log("success");
+    this.formService.sendinfo(formData).subscribe(res=>{console.log(res);
                                                   this.message="successfully updated";
                                                   this.myform.setValue({
                                                     name:'', email:'', feedback:'', comment:''
@@ -48,12 +48,19 @@ export class FormComponent implements OnInit {
   share(){
     if (this.message!=''){    
       if (this.message=="successfully updated") {
-        window.alert("Successfully Updated");
+        window.alert("Feedback Successfully Updated");
         this.message='';
       } else {
         window.alert("Error");
         this.message='';
       }      
     } 
+  }
+
+  grtfb(){
+    this.myform.patchValue({
+      feedback:'Great'
+    })
+    this.bform.feedback='Great';
   }
 }

@@ -1,7 +1,5 @@
-
 <div class="img">   
    <div class='form'>
-
         <form 
             [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
             <div class='name'>
@@ -40,10 +38,11 @@
                         <span class="checkmark"></span>
                     </label><br>
                 
-                    <label class='radio'><span>Good</span>
-                        <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Good">
+                    <label class='radio'><span>Great</span>
+                        <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Great">
                         <span class="checkmark"></span>
                     </label>
+                     <!-- <img class='fbimg' (click)="this.grtfb()" src="https://www.iconpacks.net/icons/2/free-feedback-icon-2949-thumb.png"/> -->
                 <div
                 *ngIf="myform.controls.feedback.errors?.required && myform.controls.feedback.touched"
                 class="error">
