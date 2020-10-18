@@ -1,5 +1,7 @@
+
 <div class="img">   
    <div class='form'>
+
         <form 
             [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
             <div class='name'>
@@ -57,16 +59,9 @@
             <button [disabled]="!myform.valid" id='button'>Submit</button>
         </form>
     </div>
-
     <div>
         {{share()}}
     </div>
-</div>
-
-<div class='home'>
-    <button mat-icon-button class='btn'>
-        <a routerLink="">Home</a>    
-    </button>
 </div>
 
 <!-- <div class="area" >
@@ -83,3 +78,4 @@
                 <li></li>
         </ul>
 </div > -->
+

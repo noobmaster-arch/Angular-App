@@ -7,8 +7,8 @@ export interface Person {
 export const PERSON: Person[] = [
   {
   name: 'Mukesh Reddy',
-  mail: 'julakantimukeshreddy@gmail.com',
-  phone: '+91 93411 16867'
+  mail: 'julakantimukeshreddy123@gmail.com',
+  phone: '+91 93477 16867'
   },
   {
     name: 'Savyasach Reddy',
