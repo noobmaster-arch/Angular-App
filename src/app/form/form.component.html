@@ -1,5 +1,5 @@
-<div *ngIf="bform" >
-    <div class='form'>
+<div class="img">   
+   <div class='form'>
         <form 
             [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
             <div class='name'>
@@ -42,11 +42,11 @@
                         <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Good">
                         <span class="checkmark"></span>
                     </label>
-                <!-- <div
+                <div
                 *ngIf="myform.controls.feedback.errors?.required && myform.controls.feedback.touched"
                 class="error">
                 *Required
-                </div> -->
+                </div>
                 </div>     
             </div><br>
 
@@ -57,17 +57,29 @@
             <button [disabled]="!myform.valid" id='button'>Submit</button>
         </form>
     </div>
-    <ng-template *ngIf="!bform" id='loading'>
-        Loading User...
-    </ng-template>
+
     <div>
         {{share()}}
     </div>
 </div>
+
 <div class='home'>
     <button mat-icon-button class='btn'>
         <a routerLink="">Home</a>    
-      </button>
-  
+    </button>
 </div>
 
+<!-- <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div > -->
