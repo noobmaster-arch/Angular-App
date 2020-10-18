@@ -39,10 +39,9 @@
                     </label><br>
                 
                     <label class='radio'><span>Great</span>
-                        <input type="radio" formControlName="feedback" required value='Good' ng-checked="bform.feedback===Great">
+                        <input type="radio" formControlName="feedback" required value='Great' ng-checked="bform.feedback===Great">
                         <span class="checkmark"></span>
                     </label>
-                     <!-- <img class='fbimg' (click)="this.grtfb()" src="https://www.iconpacks.net/icons/2/free-feedback-icon-2949-thumb.png"/> -->
                 <div
                 *ngIf="myform.controls.feedback.errors?.required && myform.controls.feedback.touched"
                 class="error">
@@ -61,6 +60,7 @@
     <div>
         {{share()}}
     </div>
+    <!-- <img class='fbimg' (click)="this.grtfb()" src="https://www.iconpacks.net/icons/2/free-feedback-icon-2949-thumb.png"/> -->
 </div>
 
 <!-- <div class="area" >
