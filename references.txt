@@ -1,4 +1,9 @@
-
-
+20
 https://stackoverflow.com/questions/279421/can-you-style-an-html-radio-button-to-look-like-a-checkbox
 https://stackoverflow.com/questions/57800836/angular-7-email-validation-using-regex-on-reactive-form
+https://www.w3schools.com/howto/howto_google_fonts.asp
+https://www.w3schools.com/charsets/tryit.asp?deci=9728
+https://freefrontend.com/css-text-effects/
+https://www.w3schools.com/css/css_boxmodel.asp
+https://codepen.io/atnyman/pen/cgGuL/
+https://www.searchenginejournal.com/examples-contact-us-pages/378518/#close
