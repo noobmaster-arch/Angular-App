@@ -1,4 +1,4 @@
-<div *ngIf="bform">
+<div *ngIf="bform" >
     <div class='form'>
         <form 
             [formGroup]="myform" (ngSubmit)="sendinfo(myform.value)">
@@ -19,6 +19,11 @@
                 class="error">
                 *Required
                 </div>
+                <div
+                *ngIf="!myform.controls.email.valid && myform.controls.email.touched && !myform.controls.email.errors?.required"
+                class="error">
+                *invalid email address
+            </div>
             </div><br>
             <div class='feedback'>
                 <label class='requiredfield'> Feedback </label> <br>  
@@ -49,17 +54,13 @@
                 <label id='cmnt'> Comments </label><br>
                 <textarea id='comment' formControlName="comment"></textarea>
             </div><br>
-            <button [disabled]="!myform.valid" id='button' [class.errorsubmit]="!myform.valid">Submit</button>
+            <button [disabled]="!myform.valid" id='button'>Submit</button>
         </form>
     </div>
-    <ng-template *ngIf="!myform" id='loading'>
+    <ng-template *ngIf="!bform" id='loading'>
         Loading User...
     </ng-template>
-<div>
-    <!-- <h3>{{message}}</h3> -->
-    {{share()}}
-</div>
-<button mat-icon-button>
-    <a routerLink="">Home</a>    
-  </button>
+    <div>
+        {{share()}}
+    </div>
 </div>

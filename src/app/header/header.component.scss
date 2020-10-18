@@ -1,23 +1,55 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
+
+.empty {
+    background-color: #000000; 
+    border: none;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Cinzel Decorative';
+    font-variant: small-caps;
+}
+.btn-group .button {
+    background-color: #000000; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Cinzel Decorative';
+    font-variant: small-caps;
+}
+  
+  .btn-group .button:hover {
+    background-color: #000000;
+  }
+  .btn-group .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
   }
   
-  li a:hover {
-    background-color: #111;
+  .btn-group .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn-group .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn-group .button:hover span:after {
+    opacity: 1;
+    right: 0;
   }

@@ -1,141 +1,169 @@
 .form{
-    margin-left:660px;
-    margin-top:100px;
+  margin-left:660px;
+  margin-top:100px;
 }
 
 .error{
-    color: red;
+  color: red;
 }
 
 input[type="text"]{
+width: 40%;
+font-size: large;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.errorborder{
   width: 40%;
   font-size: large;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid red;
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-.errorborder{
-    width: 40%;
-    font-size: large;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid red;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 .requiredfield{
-    font-size: 125%;
+  font-size: 125%;
 }
 
 #cmnt{
-    font-size: 125%;
+  font-size: 125%;
 }
 
 label{
-    color:SlateBlue;
+  color:SlateBlue;
 }
 
 .radio{
-    color:black;
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
-    font-size: 15px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  color:black;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .css-prp
 {
-  color: green;
-  font-family: arial;
+color: green;
+font-family: arial;
 }
 
 /* Hide the browser's default radio button */
 input[type='radio'] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+position: absolute;
+opacity: 0;
+cursor: pointer;
 }
 
 /* Create a custom radio button */
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: lightgrey;
-  border-radius: 10%;
+position: absolute;
+top: 0;
+left: 0;
+height: 16px;
+width: 16px;
+background-color: lightgrey;
+border-radius: 10%;
 }
 
-/* When the radio button is checked, add a blue background */
+/* When the radio button is checked, add a colored background */
 input[type="radio"]:checked ~ .checkmark {
-  background-color: green;
+background-color: green;
 }
 
 #feedback{
-    margin-top: 8px;
-    padding-left: 8px;
+  margin-top: 8px;
+  padding-left: 8px;
 }
 
 .requiredfield:after{
-    content:"*";
-    color: red;
+  content:"*";
+  color: red;
 }
 
 textarea {
-    width: 40%;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
+  width: 40%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
 
-  #button {
-    display: inline-block;
-    padding: 0.20em ;
-    border: 0.1em solid slateblue;
-    background-color: slateblue;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roborto',sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;
-    text-align: center;
-    transition: all 0.2s;
-    width: 15%;
-    height: 5%;
-    font-size: 130%;
-  }
+button {
+  display: inline-block;
+  padding: 0.20em ;
+  border: 0.1em solid slateblue;
+  background-color: slateblue;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roborto',sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+  width: 15%;
+  height: 5%;
+  font-size: 130%;
+}
 
-  .errorsubmit{
-    display: inline-block;
-    padding: 0.20em ;
-    border: 0.1em solid rgb(204, 182, 241);
-    background-color:  rgb(204, 182, 241);
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roborto',sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;
-    text-align: center;
-    transition: all 0.2s;
-    width: 15%;
-    height: 5%;
-    font-size: 130%;
-  }
+button:disabled{
+  display: inline-block;
+  padding: 0.20em ;
+  border: 0.1em solid rgb(204, 182, 241);
+  background-color:  rgb(204, 182, 241);
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roborto',sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+  width: 15%;
+  height: 5%;
+  font-size: 130%;
+}
 
+.btn{
+  margin-left:60px;
+  margin-top:10px;
+  position:relative;
+  display: inline-block;
+  padding: 0.20em ;
+  border: 0.1em solid slateblue;
+  background-color: slateblue;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roborto',sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+  width: 7%;
+  height: 5%;
+  font-size: 130%;
+}
+
+a{
+  color: white;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
