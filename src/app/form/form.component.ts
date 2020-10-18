@@ -36,14 +36,13 @@ export class FormComponent implements OnInit {
   }
 
   sendinfo(formData: Form){
-    this.formService.sendinfo(formData).subscribe(res=>{console.log(res);
+    this.formService.sendinfo(formData).subscribe(res=>{
                                                   this.message="successfully updated";
                                                   this.myform.setValue({
                                                     name:'', email:'', feedback:'', comment:''
                                                   })
                                                 }
-                                                  , err=>{console.log(err);
-                                                  this.message="Error"} )
+                                                  , err=>{this.message="Error"} )
   }
   share(){
     if (this.message!=''){    
