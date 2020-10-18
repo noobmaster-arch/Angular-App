@@ -1,12 +1,13 @@
 
-// .img{
-//   background-image: url('../../assets/paper.jpg');
-//   width:60%;
-//   height: auto;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+.img{
+  background-image: url('https://www.stptax.com/wp-content/uploads/2017/11/Client-feedback-banner.jpg');
+  width:80%;
+  height: 86%;
+  margin-left: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .form{
     margin-left:660px;
@@ -19,11 +20,10 @@
 
 input[type="text"]{
 width: 40%;
-font-size: large;
-padding: 12px 20px;
-margin: 8px 0;
+padding: 10px 18px;
+margin: 0px 0;
 display: inline-block;
-border: 1px solid #000000;
+border: 1px  #000000;
 border-radius: 4px;
 box-sizing: border-box;
 }
@@ -39,6 +39,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .requiredfield, #cmnt{
@@ -129,35 +130,10 @@ background-color: green;
     background-color:  rgb(204, 182, 241);
   }
 
-  button:hover{
+  button:hover:enabled{
     border: 0.1em solid rgb(69, 33, 128);
     background-color:  rgb(69, 33, 128);
   }
-
-.btn{
-    margin-left:60px;
-    margin-top:10px;
-    position:relative;
-    display: inline-block;
-    padding: 0.20em ;
-    border: 0.1em solid slateblue;
-    background-color: slateblue;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roborto',sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;
-    text-align: center;
-    transition: all 0.2s;
-    width: 7%;
-    height: 5%;
-    font-size: 130%;
-}
-
-a{
-    color: white;
-}
 
 input.ng-invalid.ng-touched {
     border: 1px solid red;
